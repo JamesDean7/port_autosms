@@ -1,0 +1,340 @@
+$color_page_head:#6b80ae;
+
+.inputsidebar {
+    position:fixed; z-index:20;
+    top:0; left:0;
+    padding:40px 0px;
+    width:100%;
+    height:100vh;
+    background:#ffffff;
+    animation:ani_inputsidebar 300ms forwards;
+
+    &__cancel {
+        position:absolute;
+        top:0px; right:10px;
+        svg {
+            width:25px;
+            height:25px;
+        }
+    }
+
+    &__container {
+        position:relative;
+        height:100%; 
+        padding:10px 20px;
+        overflow-y:auto;
+    }
+
+    &__iconwrap {
+        display:flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        @include flex_center_both;
+        width:70px; 
+        height:70px;
+        background:$color_theme;
+        border-radius: 15px;
+        path {
+            stroke: #ffffff;
+        }
+    }
+
+    &__titlewrap {
+        margin-bottom:50px;
+        text-align: center;
+    }
+
+    &__title {
+        margin-top:1.25rem;
+    }
+
+    &__subtitle {
+        margin-top:0.625rem;
+        font-size:1rem;
+        color:$color_grey3;
+    }
+
+    &__inputwrap {
+        position:relative;
+        margin-top:30px;
+        &:nth-of-type(1) {
+            margin-top:0;
+        }
+        &.readonly {
+            opacity:0.4;
+        }
+    }
+    
+    &__value {
+        display:block;
+        margin-bottom:10px;
+        font-size:16px;
+        color:$color_grey4;
+    }
+
+
+    &__label {
+        display:block;
+        margin-bottom:10px;
+        font-size:16px;
+    }
+
+    &__input {
+        padding:5px 0;
+        width:100%;
+        font-size:16px;
+        color:$color_grey4;
+        border:none; 
+        border-bottom:1px solid $color_grey3;
+    }
+
+    &__textarea {
+        padding:10px;
+        width:100%;
+        height:150px;
+        font-size:16px;
+        line-height: 1.5;
+        color:&color_grey3;
+        border:1px solid $color_grey3;
+        border-radius:5px;
+        white-space: pre-wrap;
+    }
+
+    .DayPickerInput {
+        display:block;
+    }
+
+    &__daypicker {
+        padding:5px;
+        width:100%;
+        font-size:16px;
+        color:&color_grey3;
+        border:none; 
+        border-bottom:1px solid $color_grey3;
+    }
+
+    &__checkboxwrap {
+        display:flex;
+        align-items: center;
+        margin:5px 0 0 0;
+        &:nth-of-type(1) {
+            margin:0;
+        }
+    }
+
+    &__checkboxtext {
+        margin:0 10px 0 0;
+    }
+
+
+    &__dropbox {
+        displaY:none;
+        position:absolute;
+        z-index:2;
+        top:100%; left:0%; 
+        width:100%;
+        &.on {
+            display:block;
+            animation:ani_bottom_top 300ms forwards;
+        }
+    }
+
+    &__dropoption {
+        padding:15px 10px;
+        text-align: center;
+        color:$color_theme;
+        background:#ffffff;
+        border:2px solid $color_theme;
+        border-bottom:none;
+        cursor: pointer;
+        transition:background 300ms;
+        &:nth-last-of-type(1) {
+            border-bottom:2px solid $color_theme;
+        }
+        &:hover {
+            color:#ffffff;
+            background:$color_theme;
+        }
+    }
+
+    &--titleoption {
+        font-weight:700;
+        color:#ffffff;
+        background:$color_theme;
+        border:2px solid $color_theme;
+        &:hover {
+            color:#ffffff;
+            background:$color_theme;
+        }
+    }
+
+    &__btnwrap {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:40px;
+    }
+
+    &__btn {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:47%;
+        padding:10px 0;
+        font-size:17px;
+        color:#ffffff;
+        background:$color_theme;
+        border-radius: 5px;
+        border:2px solid $color_theme;
+        cursor: pointer;
+        transition:300ms;
+    }
+
+    &__btn.cancel {
+        border:2px solid #000000;
+        background:#000000;
+        border:1px solid #000000;
+    }
+
+    &__servicewrap {
+        margin:30px 0 0 0;
+    }
+
+    &__serviceblock {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:20px auto 0 auto;
+        padding:15px 10px;
+        width:100%;
+        color:$color_theme;
+        background:#ffffff;
+        border-radius:5px;
+        border:3px solid $color_theme;
+        cursor: pointer;
+        transition:background 300ms;
+        &.center {
+            justify-content: center;
+        }
+        &:hover {
+            color:#ffffff;
+            background:$color_theme;
+        }
+        &:nth-of-type(1){
+            margin:0;
+        }
+    }
+
+    &__service {
+        font-size:17px;
+        line-height:1.3;
+        &:nth-of-type(1) {
+            margin:0;
+        }
+    }
+
+
+    .infobox {
+        padding:20px;
+        background: #ecf1fe;
+        border-radius: 15px;
+        color: #6b80ae;
+
+        &__block {
+            margin:15px 0 0 0;
+            &:nth-of-type(1) {
+                margin:0;
+            }
+        }
+
+        &__title {
+            font-size:17px;
+            font-weight:700;
+        }
+
+        &__content {
+            margin:5px 0 0 0;
+            font-size:15px;
+        }
+
+    }
+
+    .checkbox {
+        position:relative;
+
+        &__input {
+           display:none;
+        }
+
+        &__input:checked + .checkbox__label {
+            .checkbox__mark {
+                display:block;
+            }
+        }
+
+        &__label {
+            position:relative;
+            width:25px;
+            height:25px;
+            border:2px solid $color_grey3;
+            cursor: pointer;
+        }
+
+        &__mark {
+            display:none;
+            position:absolute;
+            top:35%; left:50%;
+            transform:translate(-50%, -50%) rotate(135deg);
+            width:15px;
+            height:10px;
+            border-top:3px solid $color_theme;
+            border-right:3px solid $color_theme;
+            border-left:none;
+            border-bottom:none;
+        }
+    }
+
+
+}
+
+@media screen and (min-width:768px) {
+
+    .inputsidebar {
+        width:350px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .inputsidebar {
+        &__btn:hover {
+            color:$color_theme;
+            background:#ffffff;
+        }
+        &__btn.cancel:hover {
+            color:#000000;
+            background:#ffffff;
+        }
+    }
+
+}
+
+@media screen and (min-width:1680px) {
+
+}
+
+
+
+@keyframes ani_inputsidebar {
+    from {
+        transform:translate(-100%, 0);
+    }
+    to {
+        transform:translate(0, 0);
+    }
+}
+
+

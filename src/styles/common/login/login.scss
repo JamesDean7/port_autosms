@@ -1,0 +1,445 @@
+
+$login_color_theme:#267DFF;
+
+
+
+/* ::::::: Default Value Setting ::::::: */
+
+input:focus { outline: none; }
+
+.login__input {
+    &::placeholder {
+        font-weight:700;
+        font-family: 'Noto Sans KR', sans-serif;
+        color:$color_grey4;
+    }
+    &:-ms-input-placeholder {
+        font-family: 'Noto Sans KR', sans-serif;
+        color:$color_grey4;
+    }
+   
+}
+
+
+/* ::::::: Login Style ::::::: */
+
+.login__textarea {
+    &::placeholder {
+        font-weight:700;
+        font-family: 'Noto Sans KR', sans-serif;
+        color:$color_grey4; 
+    }
+    &:-ms-input-placeholder {
+        font-family: 'Noto Sans KR', sans-serif;
+        color:$color_grey4;
+    }
+}
+
+.login {
+
+    &--fullheight {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding:20px 0;
+    }
+
+    &__deco1 {
+        position:absolute;
+        right:-50px; top:10%;
+        width:35vw; height:35vw;
+        border:20px solid #ffffff;
+        border-radius: 100%;
+        opacity:0;
+        animation:toLeft 600ms ease 400ms forwards;
+    }
+
+    &__deco2 {
+        position:absolute; 
+        right:-50px; top:10%;
+        width:35vw; height:35vw;
+        border:20px solid #e6e6e6;
+        border-radius: 30%;
+        opacity:0;
+        animation:loginDeco2 600ms ease 500ms forwards;
+    }
+
+    &__container {
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        width:90vw;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow: 10px 10px 23px -5px rgba(58, 59, 69,0.35);
+    }
+
+    &__introblock {
+        order:2;
+        position:relative;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        padding:50px 20px;
+        width:100%;
+        color:#ffffff;
+        background:$login_color_theme;
+        overflow: hidden;
+    }
+
+    &__intro {
+        position:relative;
+        font-size:9vw;
+        &:before {
+            content:"";
+            position:absolute;
+            bottom:-20px; left:50%;
+            transform:translate(-50%, 0);
+            width:50%;
+            height: 3px;
+            background:#ffffff;
+        }
+    }
+
+    &__desc {
+        margin:50px 0 50px 0;
+        width:100%;
+        font-size: 5vw;
+        line-height:1.7;
+        word-break: keep-all;
+        text-align: center;
+    }
+
+    &__inputblock {
+        order:1;
+        position:relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:50px 30px;
+        width:100%;
+        background:#ffffff;
+    }
+
+    &__titlewrap {
+        margin-bottom:10px;
+        text-align:center;
+    }
+
+    &__title {
+        font-size:7vw; 
+    }
+
+    &__titledeco {
+        margin:20px auto 0 auto;
+        width:50px;
+        height:5px;
+        background:$login_color_theme;
+        border-radius:10px;
+    }
+
+    &__inputwrap {
+        display:flex;
+        flex-direction: column;
+        margin-top:50px;
+    }
+    
+    &__inputwrap:nth-of-type(1) {
+        margin-top:0;
+    }
+
+    &__input {
+        padding:10px;
+        border:none;
+        border-bottom:1px solid $color_grey4;
+    }
+
+    &__btnwrap {
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        margin-top:70px;
+    }
+
+    &__btn {
+        padding:10px 20vw;
+        font-size:5vw;
+        font-weight:700;
+        color:#ffffff;
+        background:$login_color_theme;
+        border:2px solid $login_color_theme;
+        border-radius:20px;
+        transition:background 300ms;
+        box-shadow: 10px 10px 23px -5px rgba(58, 59, 69,0.35);
+    }
+
+    &__btn.transparent {
+        color:#ffffff;
+        border:2px solid #ffffff;
+        box-shadow: none;
+
+    }
+
+}
+
+
+@media screen and (min-width:768px) {
+ 
+    .login {
+
+        &--fullheight {
+            padding:50px 0;
+        }
+
+        &__deco1 {
+            right:-110px;   
+            top:auto; 
+            bottom:10%;
+            width:25vw; height:25vw;
+            border:40px solid #ffffff;
+        }
+
+        &__deco2 {
+            right:-90px; top:10%;
+            width:25vw; height:25vw;
+            border:40px solid #e6e6e6;
+        }
+
+        &__container {
+            display:flex;
+            flex-direction: column;
+            align-items: stretch;
+            width:75vw;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow: 10px 10px 23px -5px rgba(58, 59, 69,0.35);
+        }
+
+        &__introblock {
+            padding:70px 50px;
+        }
+
+        &__intro {
+            position:relative;
+            font-size:40px;
+        }
+
+        &__desc {
+            font-size: 25px;
+        }
+
+        &__inputblock {
+            padding:70px 50px;
+        }
+
+        &__title {
+            font-size:35px; 
+        }
+
+        &__btn {
+            padding:10px 70px;
+            font-size:20px;
+        }
+
+    }
+    
+}
+
+
+@media screen and (min-width:1024px) {
+        
+    .login {
+
+        &--fullheight {
+            height:100vh;
+        }
+
+        &__deco1 {
+            right:-80px; bottom:10%;
+            width:170px; height:170px;
+            border:30px solid #ffffff;
+        }
+
+        &__deco2 {
+            right:-110px; top:10%;
+            width:200px; height:200px;
+            border:40px solid #e6e6e6;
+        }
+
+        &__container {
+            display:flex;
+            flex-direction: row;
+            align-items: stretch;
+            width:65vw;
+            height:80vh;
+            border-radius:15px;
+        }
+
+        &__introblock {
+            order:0;
+            padding:0 50px;
+            width:50%;
+            height:100%;
+        }
+
+        &__intro {
+            position:relative;
+            font-size:35px;
+            &:before {
+                content:"";
+                width:50%;
+                height:3px;
+            }
+        }
+
+        &__desc {
+            margin:50px 0 50px 0;
+            font-size: 17px;
+        }
+
+        &__inputblock {
+            order:0;
+            position:relative;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding:0 50px;
+            width:50%;
+        }
+
+        &__titlewrap {
+            margin-bottom:10px;
+            text-align:center;
+        }
+
+        &__title {
+            font-size:30px; 
+        }
+
+        &__titledeco {
+            margin:15px auto 0 auto;
+            width:50px;
+            height:5px;
+            border-radius:10px;
+        }
+
+        &__inputwrap {
+            display:flex;
+            flex-direction: column;
+            margin-top:50px;
+        }
+        
+        &__inputwrap:nth-of-type(1) {
+            margin-top:0;
+        }
+
+        &__input {
+            padding:10px;
+        }
+
+        &__btnwrap {
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            margin-top:70px;
+        }
+
+        &__btn {
+            padding:10px 75px;
+            font-size:18px;;
+            border-radius:20px;
+            transition:box-shadow 100ms;
+        }
+
+        &__btn:hover {
+            color:$login_color_theme;
+            background:transparent;
+            box-shadow: 0px 0px 0px 0px rgba(69, 73, 121, 0.35);
+        }
+
+        &__btn.transparent {
+            color:#ffffff;
+            border:2px solid #ffffff;
+            box-shadow: none;
+
+        }
+        &__btn.transparent:hover {
+            color:$login_color_theme;
+            background:#ffffff;
+            border:2px solid #ffffff;
+
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:1680px) {
+       
+    .login {
+
+        &__deco1 {
+            right:-100px; bottom:10%;
+            width:200px; height:200px;
+            border:40px solid #ffffff;
+        }
+
+        &__deco2 {
+            right:-130px; top:10%;
+            width:230px; height:230px;
+            border:40px solid #e6e6e6;
+        }
+        
+        &__container {
+            width:70vw;
+        }
+
+        &__intro {
+            position:relative;
+            font-size:40px;
+        }
+
+        &__desc {
+            font-size: 22px;
+        }
+        
+        &__title {
+            font-size:35px; 
+        }
+        
+        &__input {
+            font-size:18px;
+        }
+
+        &__btn {
+            padding:10px 80px;
+            font-size:23px;
+        }
+
+    }
+
+}
+
+
+@keyframes toLeft {
+    from {
+        transform:translate(100%, 0);
+    }
+    to {
+        opacity:1;
+        transform:translate(0,0);
+    }
+}
+
+@keyframes loginDeco2 {
+    from {
+        transform:translate(100%, 0) rotate(-45deg);
+    }
+    to {
+        opacity:1;
+        transform:translate(0,0) rotate(45deg);
+    }
+}
+

@@ -1,0 +1,151 @@
+
+
+.searchbar {
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    &__label {
+        flex: 0 0 80%;
+    }
+
+    &__input {
+        padding:7px;
+        width:100%;
+        color:$color_grey4;
+        border:1px solid $color_grey2;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        &::placeholder {
+            color:$color_grey2;
+        }
+        &:-ms-input-placeholder {
+            color:$color_grey2;
+        }
+    }
+
+    &__button {
+        flex: 1 1 auto;
+        font-size:1.0625rem;
+        color:#ffffff;
+        background:#ffffff;
+        border:1px solid $color_grey2;
+        border-left:none;
+        cursor: pointer;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &__svgwrap {
+        display:flex; 
+        .svg_search {
+            width:20px;
+            height:20px;
+            transition:transform 200ms;
+            path {
+                fill:$color_theme;
+            }
+        }
+    }
+
+    &__button:hover {
+        .svg_search {
+            transform:scale(1.2);
+        }
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+    .searchbar {
+        &__label {
+            flex:0 1 auto;
+            width:auto;
+        }
+
+        &__input {
+            width:250px;
+        }
+
+        &__button {
+            flex:0 1 auto;
+            padding:0 20px;
+
+        }
+
+        
+    }
+
+}
+
+
+@media screen and (min-width:1024px) {
+        
+    .searchbar {
+        display:flex;
+        flex-direction: row;
+        align-items: stretch;
+
+        &__label {
+            width:auto;
+        }
+
+        &__input {
+            padding:7px;
+            width:250px;
+            color:$color_grey4;
+            border:1px solid $color_grey2;
+            border-right:none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            &::placeholder {
+                color:$color_grey2;
+            }
+            &:-ms-input-placeholder {
+                color:$color_grey2;
+            }
+        }
+
+        &__button {
+            padding:0 10px 0 20px;
+            font-size:1.0625rem;
+            color:#ffffff;
+            background:#ffffff;
+            border:1px solid $color_grey2;
+            border-left:none;
+            cursor: pointer;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        &__svgwrap {
+            display:flex; 
+            .svg_search {
+                width:20px;
+                height:20px;
+                transition:transform 200ms;
+                path {
+                    fill:$color_theme;
+                }
+            }
+        }
+
+        &__button:hover {
+            .svg_search {
+                transform:scale(1.2);
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:1680px) {
+    
+}
+
+
+

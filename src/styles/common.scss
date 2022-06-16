@@ -1,0 +1,68 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import './fonts.scss';
+
+/* ::::::::::::: Default :::::::::::::: */
+
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+ul {
+    padding:0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans Kr', sans-serif; 
+}
+
+
+
+
+/* ::::::::::::: Common :::::::::::::: */
+
+
+.bgfilter {
+    display:none;
+    position:fixed; z-index:20;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,0.3);
+}
+.bgfilter.on {
+    display:block
+}
+
+@media screen and (min-width:768px) {
+    
+}
+
+
+@media screen and (min-width:1024px) {
+    
+}
+
+
+@media screen and (min-width:1680px) {
+    
+}
+
+@import 'styles/common/animation.scss';
+@import 'styles/common/login/login.scss';
+@import 'styles/common/page.scss';
+@import 'styles/common/pagination.scss';
+@import 'styles/sidebar/sidebar.scss';
+@import 'styles/table/listtable.scss';
+@import 'styles/search/searchbar.scss';
+@import 'styles/sidebar/inputsidebar.scss';
+
+
+
+
+
